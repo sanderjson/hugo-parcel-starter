@@ -1,16 +1,16 @@
-const purgecss = require('@fullhuman/postcss-purgecss')({
-  content: [
-    './src/layouts/**/*.html',
-  ],
-  defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || []
-});
+// const purgecss = require('@fullhuman/postcss-purgecss')({
+//   content: [
+//     './src/layouts/**/*.html',
+//   ],
+//   defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || []
+// });
 
-module.exports = {
-  plugins: [
-    require('tailwindcss')('./src/assets/css/tailwind.config.js'),
-    ...(process.env.NODE_ENV === 'production' ? [purgecss] : [])
-  ]
-};
+// module.exports = {
+//   plugins: [
+//     require('tailwindcss')('./src/assets/css/tailwind.config.js'),
+//     ...(process.env.NODE_ENV === 'production' ? [purgecss] : [])
+//   ]
+// };
 
 // console.log('NODE_ENV', process.env.NODE_ENV)
 // module.exports = {
@@ -42,6 +42,6 @@ module.exports = {
 //   ]
 // }
 
-// module.exports = {
-//   plugins: [require('tailwindcss')]
-// }
+module.exports = {
+  plugins: [require('tailwindcss')]
+}
