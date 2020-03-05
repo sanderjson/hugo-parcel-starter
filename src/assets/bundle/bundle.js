@@ -1,1 +1,0 @@
-Math.PI,Math.SQRT2;console.log("hello there"),console.log((function(o){return o*o*o}));

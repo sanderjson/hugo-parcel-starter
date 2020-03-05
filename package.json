@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "My starter for jamstack sites",
   "scripts": {
-    "clean": "rimraf src/assets/bundle/* dist/*",
+    "clean": "rimraf src/resources/* src/assets/bundle/* dist/*",
     "start": "NODE_ENV=development hugo server -D -s src -vw",
     "build": "npm run build:parcel && npm run build:hugo",
     "build:parcel": "NODE_ENV=production parcel build ./src/assets/main.js --no-cache --no-source-maps",
