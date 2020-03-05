@@ -1,1 +1,1 @@
-Math.PI,Math.SQRT2;console.log("hello there"),console.log((function(o){return o*o*o}));
+require("./bundle.css");var x;Math.PI,Math.SQRT2;console.log("hello there"),console.log((x=3)*x*x);

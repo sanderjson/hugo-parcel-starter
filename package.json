@@ -5,7 +5,8 @@
   "scripts": {
     "clean": "rimraf src/assets/bundle/* dist/*",
     "start": "NODE_ENV=development hugo server -D -s src -vw",
-    "build": "npm run build:parcel && npm run build:hugo",
+    "build": "npm run build:prepend && npm run build:parcel && npm run build:hugo",
+    "build:prepend": "node prepend",
     "build:parcel": "NODE_ENV=production parcel build ./src/assets/main.js --no-cache --no-source-maps",
     "build:hugo": "NODE_ENV=production hugo -s src -d ../dist --gc --minify"
   },
@@ -13,6 +14,7 @@
   "license": "ISC",
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^2.1.0",
+    "autoprefixer": "^9.7.4",
     "parcel": "^2.0.0-alpha.3.2",
     "postcss-cli": "^7.1.0",
     "postcss-import": "^12.0.1",
