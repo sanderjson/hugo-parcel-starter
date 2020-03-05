@@ -1,0 +1,1 @@
+require("./bundle.css");Math.PI,Math.SQRT2;console.log("hello there"),console.log((function(e){return e*e*e}));

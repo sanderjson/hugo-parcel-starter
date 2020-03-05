@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "My starter for jamstack sites",
   "scripts": {
-    "clean": "rimraf src/resources/* src/assets/bundle/* dist/*",
+    "clean": "rimraf src/assets/bundle/* dist/*",
     "start": "NODE_ENV=development hugo server -D -s src -vw",
     "build": "npm run build:parcel && npm run build:hugo",
     "build:parcel": "NODE_ENV=production parcel build ./src/assets/main.js --no-cache --no-source-maps",
@@ -15,11 +15,12 @@
     "@fullhuman/postcss-purgecss": "^2.1.0",
     "parcel": "^2.0.0-alpha.3.2",
     "postcss-cli": "^7.1.0",
-    "rimraf": "^3.0.2"
-  },
-  "dependencies": {
+    "postcss-import": "^12.0.1",
+    "postcss-modules": "^1.5.0",
+    "rimraf": "^3.0.2",
     "tailwindcss": "^1.2.0"
   },
+  "dependencies": {},
   "browser": "./src/assets/bundle/bundle.js",
   "targets": {
     "browser": {

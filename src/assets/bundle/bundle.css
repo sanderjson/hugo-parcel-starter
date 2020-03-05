@@ -1,0 +1,1 @@
+@tailwind base;@tailwind components;@tailwind utilities;.btn{@apply bg-red-500 font-bold py-2 px-4 rounded no-underline border inline-block mb-2}body{background:#e2d7d7}.example{display:grid;transition:all .5s;user-select:none;background:linear-gradient(180deg,#fff,#000)}

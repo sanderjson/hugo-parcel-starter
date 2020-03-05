@@ -10,7 +10,7 @@
 <!-- development -->
 {{ if eq "development" (getenv "NODE_ENV") }}
     {{ $css := resources.Get "css/main.css" }}
-    {{ $style := $css | resources.PostCSS (dict "config" "./postcss.config.js" "inlineImports" true) | minify}}
+    {{ $style := $css | resources.PostCSS (dict "config" "./assets/postcss.config.js" "inlineImports" true) | minify}}
     <link rel="stylesheet" href="{{ $style.Permalink | relURL  }}" type="text/css" crossorigin="anonymous"> 
 {{ end }}
 

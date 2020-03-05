@@ -1,3 +1,6 @@
+body {
+  background: rgb(226, 215, 215);
+}
 @import './tailwindcss/tailwind.css';
 @import './tailwindcss/tailwind.utilities.css';
 
@@ -6,8 +9,4 @@
   transition: all 0.5s;
   user-select: none;
   background: linear-gradient(to bottom, white, black);
-}
-
-body {
-  /* background: red; */
 }
