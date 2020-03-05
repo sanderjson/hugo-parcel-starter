@@ -1,0 +1,13 @@
+{{ define "main" }}
+
+<h1 class="text-6xl">This is the homepage</h1>
+<button class="btn">Click Here</button>
+
+    {{ range .Paginator.Pages }}
+    <article>
+    <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+    {{ .Content }}
+    </article>
+    {{ end }} 
+    
+{{ end }}

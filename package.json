@@ -1,0 +1,34 @@
+{
+  "name": "hugo-parcel-starter",
+  "version": "1.0.0",
+  "description": "My starter for jamstack sites",
+  "scripts": {
+    "clean": "rimraf src/assets/bundle/* dist/*",
+    "start": "NODE_ENV=development hugo server -D -s src -vw",
+    "build": "npm run build:parcel && npm run build:hugo",
+    "build:parcel": "NODE_ENV=production parcel build ./src/assets/main.js --no-cache --no-source-maps",
+    "build:hugo": "NODE_ENV=production hugo -s src -d ../dist --gc --minify"
+  },
+  "author": "Jonathan Sanderson | @sanderjson",
+  "license": "ISC",
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^2.1.0",
+    "parcel": "^2.0.0-alpha.3.2",
+    "postcss-cli": "^7.1.0",
+    "rimraf": "^3.0.2"
+  },
+  "dependencies": {
+    "tailwindcss": "^1.2.0"
+  },
+  "browser": "./src/assets/bundle/bundle.js",
+  "targets": {
+    "browser": {
+      "engines": {
+        "browsers": [
+          "> 1%",
+          "not dead"
+        ]
+      }
+    }
+  }
+}
