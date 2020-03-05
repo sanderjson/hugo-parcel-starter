@@ -2,3 +2,8 @@ baseURL = "/"
 languageCode = "en-us"
 title = "My New Hugo Site"
 name = "Jonathan"
+
+[module]
+  [[module.mounts]]
+    source = "../node_modules/@barba/core"
+    target = "static/@barba/core"

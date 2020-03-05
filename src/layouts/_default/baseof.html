@@ -18,10 +18,11 @@
     {{ block "site/head-meta" . }}{{ partial "site/head-meta.html" . }}{{ end }}
   </head>
 
-  <body>
+  <body data-barba="wrapper">
+  <button id="#id" class="btn">Click Here</button>
+
     <h1 class="text-6xl bg-blue-500">THIS IS THE SITE HEADER</h1>
     {{ block "header" . }}{{ partial "site/header.html" . }}{{ end }}
-    <main class="site-main" role="main">
       {{ block "main" . }}{{ end }}
     </main>
     {{ block "footer" . }}{{ partial "site/footer.html" . }}{{ end }}
