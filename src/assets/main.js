@@ -1,6 +1,7 @@
+// import "./css/main.css";
 // import barba from '@barba/core'
 // import {gsap} from 'gsap';
-
+window.global = window
 gsap.registerPlugin(barba)
 
 barba.init({
