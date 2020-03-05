@@ -5,7 +5,6 @@
 //   defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || []
 // });
 
-
 // module.exports = {
 //   plugins: [
 //     require('tailwindcss')('./src/assets/css/tailwind.config.js'),
@@ -43,8 +42,6 @@
 //   ]
 // }
 
-
 module.exports = {
-  plugins: [],
-
+  plugins: [require('tailwindcss')]
 }
