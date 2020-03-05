@@ -3,13 +3,12 @@
   {{ if (fileExists "./assets/bundle/bundle.js") }}
     {{ $js := resources.Get "bundle/bundle.js" }}
     {{ $secureJS := $js | resources.Fingerprint "sha256" }}
-    <script type="module" src="{{ $secureJS.Permalink }}" integrity="{{ $secureJS.Data.Integrity }}" crossorigin="anonymous" defer></script>
+    <script type="module" content-type="application/javascript" src="{{ $secureJS.Permalink }}" integrity="{{ $secureJS.Data.Integrity }}" crossorigin="anonymous" defer></script>
   {{ end }}
 {{ end }}
 
 <!-- development -->
 {{ if eq "development" (getenv "NODE_ENV") }}
-<title>THIS IS A TEST</title>
   {{ $js := resources.Get "main.js" }}
   <script src="{{ $js.Permalink }}" type="module" crossorigin="anonymous" defer></script>
   {{ $path := "./assets/js" }}
