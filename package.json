@@ -7,7 +7,7 @@
     "start": "NODE_ENV=development hugo server -D -s src -vw",
     "build": "npm run build:prepend && npm run build:parcel && npm run build:hugo",
     "build:prepend": "node prepend",
-    "build:parcel": "NODE_ENV=production parcel build ./src/assets/main.js --no-cache --no-source-maps",
+    "build:parcel": "NODE_ENV=production parcel build ./src/assets/main.js --no-cache --no-source-maps --no-scope-hoist",
     "build:hugo": "NODE_ENV=production hugo -s src -d ../dist --gc --minify"
   },
   "author": "Jonathan Sanderson | @sanderjson",
